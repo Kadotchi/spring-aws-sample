@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringAwsSampleApplication implements ApplicationRunner {
 
-    @Value("${process.type}")
-    private String processType;
+     @Value("${process.type}")
+     private String processType;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringAwsSampleApplication.class, args);
