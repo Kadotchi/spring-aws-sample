@@ -1,4 +1,4 @@
-package kadotchi.sample;
+package kadotchi.sample.aws;
 
 import com.amazonaws.services.quicksight.AmazonQuickSight;
 import com.amazonaws.services.quicksight.model.*;
@@ -40,19 +40,17 @@ public class QuickSightService {
         return res.toString();
     }
 
-    public boolean registAutherUser() {
-        String userName = "auther-user-01";
+    public boolean registAutherUser(String userName) {
+        userName = (userName == null ? "auther-user-01" : userName);
 
+        RegisterUserRequest req = new RegisterUserRequest()
+                .withIdentityType(IdentityType.QUICKSIGHT)
+                .withEmail("hoge@example.com")
+                .withUserRole(UserRole.READER)
+                .withAwsAccountId(awsConfig.getAccountId())
+                .withNamespace("default")
+                .withUserName(userName);
         try {
-
-            RegisterUserRequest req = new RegisterUserRequest()
-                    .withIdentityType(IdentityType.QUICKSIGHT)
-                    .withEmail("")
-                    .withUserRole(UserRole.READER)
-                    .withAwsAccountId(awsConfig.getAccountId())
-                    .withNamespace("default")
-                    .withUserName(userName);
-
             RegisterUserResult res = client.registerUser(req);
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,5 +58,4 @@ public class QuickSightService {
         }
         return true;
     }
-
 }
