@@ -1,4 +1,4 @@
-package kadotchi.sample;
+package kadotchi.sample.aws;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
