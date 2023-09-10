@@ -20,6 +20,10 @@ public class AwsController {
     }
 
     @RequestMapping("/")       // URLのパスの指定
+<<<<<<< HEAD
+=======
+    @ResponseBody
+>>>>>>> origin/master
     public List<String> top(@RequestParam(value = "name", required = false) String name) { // リクエストを受け付けるメソッド
         List<String> list = new ArrayList<String>();
         list.add("SpringBootの最小アプリケーション");
@@ -32,16 +36,28 @@ public class AwsController {
     }
 
     @RequestMapping("/users")       // URLのパスの指定
+<<<<<<< HEAD
+=======
+    @ResponseBody
+>>>>>>> origin/master
     public List<String> getListUser() { // リクエストを受け付けるメソッド
         return qsService.getListUsers();
     }
 
     @RequestMapping("/datasets")       // URLのパスの指定
+<<<<<<< HEAD
+=======
+    @ResponseBody
+>>>>>>> origin/master
     public String getDataSets() { // リクエストを受け付けるメソッド
         return qsService.getListDataSets();
     }
 
     @RequestMapping("/registerUser")       // URLのパスの指定
+<<<<<<< HEAD
+=======
+    @ResponseBody
+>>>>>>> origin/master
     public String registerUser(@RequestParam String name) { // リクエストを受け付けるメソッド
         if (qsService.registAutherUser(name)) {
             return "実行完了";
