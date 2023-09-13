@@ -24,8 +24,9 @@ public class SampleController {
         ReservationInput reservationInput = new ReservationInput();
         reservationInput.setTrainingId(trainingId);
         reservationInput.setStudentTypeCode("EMPLOYEE");
+
         model.addAttribute("reservationInput", reservationInput);
-        return "reservation/reservationForm";
+        return "/reservation/reservationForm";
     }
 
 }
