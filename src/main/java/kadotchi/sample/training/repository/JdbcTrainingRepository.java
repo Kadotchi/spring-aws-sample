@@ -1,8 +1,8 @@
-package kadotchi.training.repository;
+package kadotchi.sample.training.repository;
 
 import java.util.List;
 
-import kadotchi.training.entity.Training;
+import kadotchi.sample.training.entity.Training;
 import org.springframework.jdbc.core.DataClassRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

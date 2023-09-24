@@ -1,6 +1,6 @@
-package kadotchi.training.repository;
+package kadotchi.sample.training.repository;
 
-import kadotchi.training.entity.AuditLog;
+import kadotchi.sample.training.entity.AuditLog;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package kadotchi.training.entity;
+package kadotchi.sample.training.entity;
 
 import java.io.Serializable;
 

@@ -1,8 +1,8 @@
-package kadotchi.training.repository;
+package kadotchi.sample.training.repository;
 
 import java.util.List;
 
-import kadotchi.training.entity.Training;
+import kadotchi.sample.training.entity.Training;
 
 public interface TrainingRepository {
     Training selectById(String id);
