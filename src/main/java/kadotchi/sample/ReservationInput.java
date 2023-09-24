@@ -14,6 +14,13 @@ public class ReservationInput {
     @Pattern(regexp = "0¥¥d{1,4}-¥¥d{1,4}-¥¥d{4}")
     private String phone;
 
+    @NotBlank
+    @Email
+    private String emailAddress;
+
+    @NotBlank
+    private String studentTypeCode;
+
     public String getTrainingId() {
         return trainingId;
     }
@@ -54,11 +61,5 @@ public class ReservationInput {
         this.studentTypeCode = studentTypeCode;
     }
 
-    @NotBlank
-    @Email
-    private String emailAddress;
-
-    @NotBlank
-    private String studentTypeCode;
 
 }
